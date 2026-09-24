@@ -19,6 +19,7 @@ New-ModuleMedia.ps1
 ## Modules
 
 - [FileSmith](filesmith/README.md)
+- [Custom-Currency-5e](custom-currency-5e/README.md)
 
 ## Add another module
 
