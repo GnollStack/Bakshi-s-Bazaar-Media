@@ -18,8 +18,20 @@ New-ModuleMedia.ps1
 
 ## Modules
 
+Premium (Bakshi's Bazaar):
+
+- [5e Activity Importer](activity-Importer-5e/README.md)
+- [Custom Currency 5e](custom-currency-5e/README.md)
 - [FileSmith](filesmith/README.md)
-- [Custom-Currency-5e](custom-currency-5e/README.md)
+- [Immersive Vision FX](immersive-vision/README.md)
+- [Traffick](traffick/README.md)
+
+Free:
+
+- [5e Item Importer](5e-item-importer/README.md)
+- [Show of Hands](show-of-hands/README.md)
+- [Squad Combat Initiative](squad-combat-initiative/README.md)
+- [The Sound of Silence](the-sound-of-silence/README.md)
 
 ## Add another module
 
