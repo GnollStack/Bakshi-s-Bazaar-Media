@@ -17,10 +17,10 @@ Use these direct URLs in Foundry's image Source field or in your description HTM
 | `eye-shine-menu.gif` | Eyeshine editor demonstration for token art | [Direct GIF](https://raw.githubusercontent.com/GnollStack/Bakshi-s-Bazaar-Media/main/immersive-vision/gifs/eye-shine-menu.gif) |
 | `Before&After.png` | Vision and lighting before and after enabling Immersive Vision FX | [Direct image](https://raw.githubusercontent.com/GnollStack/Bakshi-s-Bazaar-Media/main/immersive-vision/images/Before%26After.png) |
 | `Eye-Shine-Profile-Settings.png` | Creature vision profile editor showing light reach, color perception, darkness sight, and focus controls | [Direct image](https://raw.githubusercontent.com/GnollStack/Bakshi-s-Bazaar-Media/main/immersive-vision/images/Eye-Shine-Profile-Settings.png) |
-| `Eye-Shine-Menu.png` | Eyeshine Editor (not currently used in the README) | [Direct image](https://raw.githubusercontent.com/GnollStack/Bakshi-s-Bazaar-Media/main/immersive-vision/images/Eye-Shine-Menu.png) |
-| `Eye-Shine-Profiles.png` | Vision profiles (not currently used in the README) | [Direct image](https://raw.githubusercontent.com/GnollStack/Bakshi-s-Bazaar-Media/main/immersive-vision/images/Eye-Shine-Profiles.png) |
-| `Eyeshine-Before.png` | Token art before eyeshine (not currently used in the README) | [Direct image](https://raw.githubusercontent.com/GnollStack/Bakshi-s-Bazaar-Media/main/immersive-vision/images/Eyeshine-Before.png) |
-| `eyeshine-After.png` | Token art with eyeshine (not currently used in the README) | [Direct image](https://raw.githubusercontent.com/GnollStack/Bakshi-s-Bazaar-Media/main/immersive-vision/images/eyeshine-After.png) |
+| `Eye-Shine-Menu.png` | Eyeshine Library listing mapped token art with their glow points | [Direct image](https://raw.githubusercontent.com/GnollStack/Bakshi-s-Bazaar-Media/main/immersive-vision/images/Eye-Shine-Menu.png) |
+| `Eye-Shine-Profiles.png` | Profile Library in Settings & Vision Profiles, showing Canid and Ungulate profiles | [Direct image](https://raw.githubusercontent.com/GnollStack/Bakshi-s-Bazaar-Media/main/immersive-vision/images/Eye-Shine-Profiles.png) |
+| `Eyeshine-Before.png` | Creature tokens at the edge of torchlight without eyeshine | [Direct image](https://raw.githubusercontent.com/GnollStack/Bakshi-s-Bazaar-Media/main/immersive-vision/images/Eyeshine-Before.png) |
+| `eyeshine-After.png` | The same creature tokens in darkness, their eyes glowing with eyeshine | [Direct image](https://raw.githubusercontent.com/GnollStack/Bakshi-s-Bazaar-Media/main/immersive-vision/images/eyeshine-After.png) |
 
 For still images, use the same URL structure with `images/` and the actual filename.
 

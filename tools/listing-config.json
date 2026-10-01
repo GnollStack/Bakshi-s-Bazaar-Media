@@ -1,0 +1,22 @@
+{
+  "modulesDir": "%LOCALAPPDATA%/FoundryVTT/Data/modules",
+  "modules": {
+    "5e-activity-importer": { "tier": "premium" },
+    "custom-currency-5e": { "tier": "premium" },
+    "filesmith": { "tier": "premium" },
+    "immersive-vision-fx": { "tier": "premium" },
+    "traffick": { "tier": "premium" },
+    "5e-item-importer": {
+      "tier": "free",
+      "github": "https://github.com/GnollStack/5e-Item-Importer",
+      "omitFromListing": {
+        "anchoredDetails": "^validated-(yaml-|mixed-batch-example$|same-type-batch-example$)",
+        "noteAfterHeading": "validated-custom-yaml-examples",
+        "note": "The complete examples, including mixed-type and same-type batches, are in the <a href=\"https://github.com/GnollStack/5e-Item-Importer#validated-custom-yaml-examples\">README on GitHub</a>."
+      }
+    },
+    "show-of-hands": { "tier": "free", "github": "https://github.com/GnollStack/Show-Of-Hands" },
+    "squad-combat-initiative": { "tier": "free", "github": "https://github.com/GnollStack/Squad-Combat-Initiative" },
+    "the-sound-of-silence": { "tier": "free", "github": "https://github.com/GnollStack/The-Sound-of-Silence" }
+  }
+}
