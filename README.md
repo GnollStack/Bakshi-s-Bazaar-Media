@@ -13,6 +13,10 @@ _module-template/
   README.md
   gifs/
   images/
+tools/
+  listing.py
+  listing-config.json
+  module-lists.json
 New-ModuleMedia.ps1
 ```
 
@@ -64,3 +68,24 @@ Use the raw image URL, rather than a GitHub `/blob/` file-viewing page. The same
 Keep published filenames and folder paths stable. Replacing a file at the same path keeps existing links usable, although cached images can take a little while to update. Keep older files when introducing a new filename so existing descriptions continue to work.
 
 The `.gitkeep` files only preserve empty folders in Git. They are not images and do not need to be uploaded into a description.
+
+## Package listings and shared module tables
+
+Each module's `docs/README.html` is the Foundry package listing, built from that module's `README.md`. Build it with `tools/listing.py` rather than editing the HTML by hand. The tool expects your modules in `%LOCALAPPDATA%\FoundryVTT\Data\modules`. Use `--modules-dir` or the `FOUNDRY_MODULES_DIR` environment variable if they live elsewhere.
+
+Install the two dependencies once:
+
+```powershell
+python -m pip install -r tools/requirements.txt
+```
+
+| Command | What it does |
+| --- | --- |
+| `python tools/listing.py build` | Rebuilds every `docs/README.html`. Add module IDs to rebuild only those. |
+| `python tools/listing.py check` | Reports listings that are out of date or have broken anchors, relative links, or unrendered Markdown. |
+| `python tools/listing.py sync-lists` | Rewrites the **Bakshi's Bazaar** table in the free READMEs and the **Free Modules** table in the premium READMEs from `tools/module-lists.json`. |
+
+- **Version check:** `build` and `check` stop if a README states a version (badge or **Version:** line) that differs from its `module.json`.
+- **Listing rules:** `tools/listing-config.json` holds the per-module settings, such as each free module's GitHub URL for repository links and sections left out of a listing.
+- **New module:** add it to `tools/listing-config.json`, and to `tools/module-lists.json` if it should appear in the shared tables.
+- **Release order:** run `sync-lists`, then `build`, before each release, so the README and listing ship together.
