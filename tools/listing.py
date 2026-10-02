@@ -81,6 +81,10 @@ def render(root, module):
     md = MarkdownIt("commonmark", {"html": True}).enable("table").enable("strikethrough")
     out = md.render(src)
     out = out.replace('<div align="center">', '<div style="text-align: center;">')
+    # GitHub's align="center" also centers tables; in a listing that takes auto margins.
+    out = re.sub(r'<div style="text-align: center;">.*?</div>',
+                 lambda m: m.group(0).replace("<table>", '<table style="margin-left: auto; margin-right: auto;">'),
+                 out, flags=re.S)
 
     # Headings take the id of the <a id> anchors just above them, otherwise a GitHub-style slug.
     used = set(re.findall(r'<a id="([^"]+)"></a>', out))
@@ -166,6 +170,17 @@ def structural_problems(text):
 
 # ---------------------------------------------------------------- shared tables
 
+def match_apostrophes(text, document):
+    """Use curly apostrophes where the README does: everywhere if it mostly does, else just in the brand name."""
+    curly = len(re.findall(r"[A-Za-z]’[A-Za-z]", document))
+    straight = len(re.findall(r"[A-Za-z]'[A-Za-z]", re.sub(r"```.*?```", "", document, flags=re.S)))
+    if curly > straight:
+        return re.sub(r"(?<=[A-Za-z])'(?=[A-Za-z])", "’", text)
+    if "Bakshi’s" in document:
+        return text.replace("Bakshi's", "Bakshi’s")
+    return text
+
+
 def table(entries, overrides, linked):
     rows = ["| Module | What it adds |", "| --- | --- |"]
     for e in entries:
@@ -182,7 +197,7 @@ def sync_lists(root):
         lines = path.read_bytes().decode("utf-8").splitlines(keepends=True)
         bare = [line.rstrip("\r\n") for line in lines]
         if settings["tier"] == "free":
-            anchor, rows = '<a id="bakshis-bazaar"></a>', table(LISTS["premium"], LISTS["overrides"].get(module, {}), False)
+            anchor, rows = '<a id="bakshis-bazaar"></a>', table(LISTS["premium"], LISTS["overrides"].get(module, {}), True)
         else:
             anchor, rows = '<a id="free-modules"></a>', table(LISTS["free"], LISTS["overrides"].get(module, {}), True)
         if anchor not in bare:
@@ -193,12 +208,31 @@ def sync_lists(root):
         last = first
         while last + 1 < len(bare) and bare[last + 1].startswith("|"):
             last += 1
+        updated = []
         if bare[first:last + 1] != rows:
             eol = "\r\n" if lines[first].endswith("\r\n") else "\n"
             lines[first:last + 1] = [row + eol for row in rows]
+            bare = [line.rstrip("\r\n") for line in lines]
+            updated.append("table")
+        # Bulleted list under any "... Bazaar Patron membership includes:" line, in the file's apostrophe style.
+        # Judge the style from the rest of the README, not from the list being replaced.
+        rest = "".join(line for line in bare
+                       if not (line.startswith("- ") and line[2:].replace("’", "'") in LISTS["patronBenefits"]))
+        benefits = [f"- {match_apostrophes(item, rest)}" for item in LISTS["patronBenefits"]]
+        for intro in [i for i, line in enumerate(bare) if line.endswith("Bazaar Patron membership includes:")]:
+            first = intro + 2
+            last = first
+            while last + 1 < len(bare) and bare[last + 1].startswith("- "):
+                last += 1
+            if bare[first:last + 1] != benefits:
+                eol = "\r\n" if lines[intro].endswith("\r\n") else "\n"
+                lines[first:last + 1] = [item + eol for item in benefits]
+                bare = [line.rstrip("\r\n") for line in lines]
+                updated.append("patron benefits")
+        if updated:
             path.write_bytes("".join(lines).encode("utf-8"))
             changed += 1
-            print(f"{module}: table updated")
+            print(f"{module}: {', '.join(updated)} updated")
     print(f"{changed} README(s) changed")
 
 

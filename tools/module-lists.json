@@ -1,16 +1,22 @@
 {
   "premium": [
-    { "id": "5e-activity-importer", "name": "5e Activity Importer", "summary": "Adds activities and Active Effects to dnd5e Items from YAML, or imports complete Items together with 5e Item Importer." },
-    { "id": "custom-currency-5e", "name": "Custom Currency 5e", "summary": "Custom coins, exchange rates, regional markets, and physical coin items on native dnd5e sheets." },
-    { "id": "filesmith", "name": "FileSmith", "summary": "Folder colors, multi-select, clipboard actions, and move undo for Foundry's sidebar." },
-    { "id": "immersive-vision-fx", "name": "Immersive Vision FX", "summary": "Soft vision and light edges, creature vision profiles, cave light, and eyeshine." },
-    { "id": "traffick", "name": "Traffick", "summary": "Party trading, merchant catalogs, perceived prices, and appraisal checks for dnd5e." }
+    { "id": "5e-activity-importer", "name": "5e Activity Importer", "url": "https://foundryvtt.com/packages/5e-activity-importer", "summary": "Adds activities and Active Effects to dnd5e Items from YAML, or imports complete Items together with 5e Item Importer." },
+    { "id": "custom-currency-5e", "name": "Custom Currency 5e", "url": "https://foundryvtt.com/packages/custom-currency-5e", "summary": "Custom coins, exchange rates, regional markets, and physical coin items on native dnd5e sheets." },
+    { "id": "filesmith", "name": "FileSmith", "url": "https://foundryvtt.com/packages/filesmith", "summary": "Folder colors, multi-select, clipboard actions, and move undo for Foundry's sidebar." },
+    { "id": "immersive-vision-fx", "name": "Immersive Vision FX", "url": "https://foundryvtt.com/packages/immersive-vision-fx", "summary": "Soft vision and light edges, creature vision profiles, cave light, and eyeshine." },
+    { "id": "traffick", "name": "Traffick", "url": "https://foundryvtt.com/packages/traffick", "summary": "Party trading, merchant catalogs, perceived prices, and appraisal checks for dnd5e." }
   ],
   "free": [
     { "id": "5e-item-importer", "name": "5e Item Importer", "url": "https://github.com/GnollStack/5e-Item-Importer", "summary": "Turns D&D 5e stat blocks or YAML into Items." },
     { "id": "show-of-hands", "name": "Show of Hands", "url": "https://github.com/GnollStack/Show-Of-Hands", "summary": "Middle-mouse targeting, marquee selection, and custom shared cursors." },
     { "id": "squad-combat-initiative", "name": "Squad Combat Initiative", "url": "https://github.com/GnollStack/Squad-Combat-Initiative", "summary": "Runs big dnd5e fights as squads with group initiative, captains, and morale." },
     { "id": "the-sound-of-silence", "name": "The Sound of Silence", "url": "https://github.com/GnollStack/The-Sound-of-Silence", "summary": "Internal loops, crossfades, silence gaps, and soundscapes for Foundry playlists." }
+  ],
+  "patronBenefits": [
+    "Every Bakshi's Bazaar premium module while your membership is active, including ongoing updates and new modules as they're added.",
+    "Patron-only channels in the [Bakshi's Bazaar Discord](https://discord.gg/bGQDnyqYJ).",
+    "Priority module support.",
+    "A direct place to share feedback and feature suggestions. Suggestions are welcome and taken seriously, but development priorities remain at my discretion."
   ],
   "overrides": {
     "5e-item-importer": {

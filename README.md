@@ -1,6 +1,6 @@
 # Bakshi's Bazaar Media
 
-Public promotional GIFs and images for GnollStack's Foundry VTT modules.
+Public promotional GIFs and images for my Foundry VTT modules.
 
 Each module has its own folder. The module source code and installation packages live in their separate repositories.
 
