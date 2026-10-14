@@ -89,3 +89,21 @@ python -m pip install -r tools/requirements.txt
 - **Listing rules:** `tools/listing-config.json` holds the per-module settings, such as each free module's GitHub URL for repository links and sections left out of a listing.
 - **New module:** add it to `tools/listing-config.json`, and to `tools/module-lists.json` if it should appear in the shared tables.
 - **Release order:** run `sync-lists`, then `build`, before each release, so the README and listing ship together.
+
+## Changelogs
+
+Public release notes for every free and premium module start with the next release. Each module has one changelog; **Unreleased** contains work that has not shipped yet.
+
+| Module changelog | Distribution |
+| --- | --- |
+| [5e Activity Importer](activity-Importer-5e/CHANGELOG.md) | Premium |
+| [Custom Currency 5e](custom-currency-5e/CHANGELOG.md) | Premium |
+| [FileSmith](filesmith/CHANGELOG.md) | Premium |
+| [Immersive Vision FX](immersive-vision/CHANGELOG.md) | Premium |
+| [Traffick: Trade & Barter Overhaul](traffick/CHANGELOG.md) | Premium |
+| [5e Item Importer](5e-item-importer/CHANGELOG.md) | Free |
+| [Show of Hands: Targeting & Cursors](show-of-hands/CHANGELOG.md) | Free |
+| [Squad Combat Initiative](squad-combat-initiative/CHANGELOG.md) | Free |
+| [The Sound of Silence](the-sound-of-silence/CHANGELOG.md) | Free |
+
+See [the manifest and release standard](tools/MANIFEST-STANDARD.md) for checks and the release order.

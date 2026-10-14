@@ -35,3 +35,11 @@ This folder also holds copies of five Traffick files (`traffick-trade.gif`, `Tra
 5. Paste the direct URLs into your Foundry description's image Source fields or HTML.
 
 Keep paths stable after publishing so existing store-page images keep loading.
+
+## Release notes
+
+[Read the changelog](CHANGELOG.md). History starts with the next release.
+
+## Setup artwork
+
+No Setup artwork is published yet.

@@ -5,6 +5,7 @@ Public promotional media for **__MODULE_TITLE__**.
 - Module ID: `__MODULE_ID__`
 - `gifs/`: animated feature demonstrations.
 - `images/`: screenshots, banners, and other still images.
+- [Changelog](CHANGELOG.md): public release notes, starting with the next release.
 
 ## Media links
 

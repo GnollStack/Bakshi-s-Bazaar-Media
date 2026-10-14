@@ -23,10 +23,12 @@ if ([string]::IsNullOrWhiteSpace($Title)) { $Title = $ModuleId }
 
 # Start with the same two media folders every time. Existing modules are left alone.
 Copy-Item -LiteralPath $template -Destination $destination -Recurse
-$readme = Join-Path $destination 'README.md'
-$content = [IO.File]::ReadAllText($readme)
-$content = $content.Replace('__MODULE_ID__', $ModuleId).Replace('__MODULE_TITLE__', $Title)
-[IO.File]::WriteAllText($readme, $content, (New-Object Text.UTF8Encoding $false))
+foreach ($name in @('README.md', 'CHANGELOG.md')) {
+  $document = Join-Path $destination $name
+  $content = [IO.File]::ReadAllText($document)
+  $content = $content.Replace('__MODULE_ID__', $ModuleId).Replace('__MODULE_TITLE__', $Title)
+  [IO.File]::WriteAllText($document, $content, (New-Object Text.UTF8Encoding $false))
+}
 
 Write-Host "Created $destination"
-Write-Host 'Add your GIFs and images, update the media links, then commit and push when ready.'
+Write-Host 'Add your GIFs and images, update the media links and changelog, then commit and push when ready.'

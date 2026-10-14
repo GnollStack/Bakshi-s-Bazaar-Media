@@ -31,3 +31,11 @@ These screenshots show the earlier compact squad headers. Version 14.2.0 uses ex
 5. Paste the direct URLs into your Foundry description's image Source fields or HTML.
 
 Keep paths stable after publishing so existing store-page images keep loading.
+
+## Release notes
+
+[Read the changelog](CHANGELOG.md). History starts with the next release.
+
+## Setup artwork
+
+No Setup artwork is published yet.
