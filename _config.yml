@@ -33,6 +33,7 @@ exclude:
 
 # Navigation. Each module's README is its page. Its CHANGELOG.md and any
 # guides/*.md are listed under it, so each module needs the three entries below.
+# The title must match the parent name exactly.
 defaults:
   - scope: { path: "" }
     values: { layout: default }
@@ -47,31 +48,31 @@ defaults:
 
   # Premium
   - scope: { path: "activity-Importer-5e/README.md" }
-    values: { nav_order: 10 }
+    values: { title: 5e Activity Importer, nav_order: 10 }
   - scope: { path: "activity-Importer-5e/CHANGELOG.md" }
     values: { parent: 5e Activity Importer }
   - scope: { path: "activity-Importer-5e/guides" }
     values: { parent: 5e Activity Importer }
   - scope: { path: "custom-currency-5e/README.md" }
-    values: { nav_order: 11 }
+    values: { title: Custom Currency 5e, nav_order: 11 }
   - scope: { path: "custom-currency-5e/CHANGELOG.md" }
     values: { parent: Custom Currency 5e }
   - scope: { path: "custom-currency-5e/guides" }
     values: { parent: Custom Currency 5e }
   - scope: { path: "filesmith/README.md" }
-    values: { nav_order: 12 }
+    values: { title: FileSmith, nav_order: 12 }
   - scope: { path: "filesmith/CHANGELOG.md" }
     values: { parent: FileSmith }
   - scope: { path: "filesmith/guides" }
     values: { parent: FileSmith }
   - scope: { path: "immersive-vision/README.md" }
-    values: { nav_order: 13 }
+    values: { title: Immersive Vision FX, nav_order: 13 }
   - scope: { path: "immersive-vision/CHANGELOG.md" }
     values: { parent: Immersive Vision FX }
   - scope: { path: "immersive-vision/guides" }
     values: { parent: Immersive Vision FX }
   - scope: { path: "traffick/README.md" }
-    values: { nav_order: 14 }
+    values: { title: "Traffick: Trade & Barter Overhaul", nav_order: 14 }
   - scope: { path: "traffick/CHANGELOG.md" }
     values: { parent: "Traffick: Trade & Barter Overhaul" }
   - scope: { path: "traffick/guides" }
@@ -79,25 +80,25 @@ defaults:
 
   # Free
   - scope: { path: "5e-item-importer/README.md" }
-    values: { nav_order: 20 }
+    values: { title: 5e Item Importer, nav_order: 20 }
   - scope: { path: "5e-item-importer/CHANGELOG.md" }
     values: { parent: 5e Item Importer }
   - scope: { path: "5e-item-importer/guides" }
     values: { parent: 5e Item Importer }
   - scope: { path: "show-of-hands/README.md" }
-    values: { nav_order: 21 }
+    values: { title: "Show of Hands: Targeting & Cursors", nav_order: 21 }
   - scope: { path: "show-of-hands/CHANGELOG.md" }
     values: { parent: "Show of Hands: Targeting & Cursors" }
   - scope: { path: "show-of-hands/guides" }
     values: { parent: "Show of Hands: Targeting & Cursors" }
   - scope: { path: "squad-combat-initiative/README.md" }
-    values: { nav_order: 22 }
+    values: { title: Squad Combat Initiative, nav_order: 22 }
   - scope: { path: "squad-combat-initiative/CHANGELOG.md" }
     values: { parent: Squad Combat Initiative }
   - scope: { path: "squad-combat-initiative/guides" }
     values: { parent: Squad Combat Initiative }
   - scope: { path: "the-sound-of-silence/README.md" }
-    values: { nav_order: 23 }
+    values: { title: The Sound of Silence, nav_order: 23 }
   - scope: { path: "the-sound-of-silence/CHANGELOG.md" }
     values: { parent: The Sound of Silence }
   - scope: { path: "the-sound-of-silence/guides" }
