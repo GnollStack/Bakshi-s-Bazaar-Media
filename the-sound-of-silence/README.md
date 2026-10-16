@@ -1,38 +1,10 @@
 # The Sound of Silence Media
 
-Public promotional media for **The Sound of Silence**.
+Screenshots and demo GIFs for [The Sound of Silence](https://github.com/GnollStack/The-Sound-of-Silence). See the [changelog](CHANGELOG.md) for release notes.
 
-- Module ID: `the-sound-of-silence`
-- `gifs/`: animated feature demonstrations.
-- `images/`: screenshots, banners, and other still images.
-
-## Media links
-
-Use these direct URLs in Foundry's image Source field or in your description HTML.
-
-| Asset | Description / alt text | Direct image URL |
-| --- | --- | --- |
-| `the-sound-of-silence-currently-playing.png` | Currently Playing transport controls | [Direct image](https://raw.githubusercontent.com/GnollStack/Bakshi-s-Bazaar-Media/main/the-sound-of-silence/images/the-sound-of-silence-currently-playing.png) |
-| `the-sound-of-silence-playlist-config.png` | Playlist configuration settings | [Direct image](https://raw.githubusercontent.com/GnollStack/Bakshi-s-Bazaar-Media/main/the-sound-of-silence/images/the-sound-of-silence-playlist-config.png) |
-| `the-sound-of-silence-loop-editor.png` | Internal loop editor | [Direct image](https://raw.githubusercontent.com/GnollStack/Bakshi-s-Bazaar-Media/main/the-sound-of-silence/images/the-sound-of-silence-loop-editor.png) |
-| `the-sound-of-silence-soundscape-roster.png` | Soundscape procedural roster and preview controls | [Direct image](https://raw.githubusercontent.com/GnollStack/Bakshi-s-Bazaar-Media/main/the-sound-of-silence/images/the-sound-of-silence-soundscape-roster.png) |
-
-For still images, use the same URL structure with `images/` and the actual filename.
-
-## Publishing
-
-1. Add the files to `gifs/` or `images/`.
-2. Update the table above with any new filenames, useful alt text, and direct URLs.
-3. Keep this module listed in the repository's main README.
-4. Commit and push, then check that each URL works without signing in.
-5. Paste the direct URLs into your Foundry description's image Source fields or HTML.
-
-Keep paths stable after publishing so existing store-page images keep loading.
-
-## Release notes
-
-[Read the changelog](CHANGELOG.md). History starts with the next release.
-
-## Setup artwork
-
-No Setup artwork is published yet.
+| Shows | File |
+| --- | --- |
+| Currently Playing transport controls | [the-sound-of-silence-currently-playing.png](https://raw.githubusercontent.com/GnollStack/Bakshi-s-Bazaar-Media/main/the-sound-of-silence/images/the-sound-of-silence-currently-playing.png) |
+| Playlist configuration settings | [the-sound-of-silence-playlist-config.png](https://raw.githubusercontent.com/GnollStack/Bakshi-s-Bazaar-Media/main/the-sound-of-silence/images/the-sound-of-silence-playlist-config.png) |
+| Internal loop editor | [the-sound-of-silence-loop-editor.png](https://raw.githubusercontent.com/GnollStack/Bakshi-s-Bazaar-Media/main/the-sound-of-silence/images/the-sound-of-silence-loop-editor.png) |
+| Soundscape procedural roster and preview controls | [the-sound-of-silence-soundscape-roster.png](https://raw.githubusercontent.com/GnollStack/Bakshi-s-Bazaar-Media/main/the-sound-of-silence/images/the-sound-of-silence-soundscape-roster.png) |

@@ -1,14 +1,14 @@
 # The Sound of Silence changelog
 
-Release history starts with the next release. Changes under **Unreleased** are still in development.
+History starts with the next release. **Unreleased** lists changes that haven't shipped yet.
 
 ## Unreleased
 
 ### Added
 
-- A public changelog linked from Foundry and the README.
+- This changelog, linked from the Foundry package page and the README.
 
 ### Changed
 
-- Limited this release line to Foundry V13–V14; V13 support still needs retesting for this update.
+- Supports Foundry V13 and V14. I haven't retested V13 with this update yet.
 - Updated the package description and author information.

@@ -4,3 +4,6 @@ Desktop.ini
 *.tmp
 *.bak
 __pycache__/
+
+# Maintainer tooling and standards stay local only
+tools/

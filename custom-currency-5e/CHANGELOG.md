@@ -1,15 +1,15 @@
 # Custom Currency 5e changelog
 
-Release history starts with the next release. Changes under **Unreleased** are still in development.
+History starts with the next release. **Unreleased** lists changes that haven't shipped yet.
 
 ## Unreleased
 
 ### Added
 
-- A public changelog linked from Foundry and the README.
+- This changelog, linked from the Foundry package page and the README.
 
 ### Changed
 
-- Limited this release line to Foundry V14; support for later generations will follow a compatibility review.
+- Supports Foundry V14 only for now. I'll add newer Foundry versions after testing them.
 - Updated the package description and author information.
-- The module website link opens its Foundry package page.
+- The module's website link now goes to its Foundry package page.

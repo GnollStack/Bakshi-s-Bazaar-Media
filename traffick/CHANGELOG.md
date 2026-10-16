@@ -1,15 +1,15 @@
 # Traffick: Trade & Barter Overhaul changelog
 
-Release history starts with the next release. Changes under **Unreleased** are still in development.
+History starts with the next release. **Unreleased** lists changes that haven't shipped yet.
 
 ## Unreleased
 
 ### Added
 
-- A public changelog linked from Foundry and the README.
+- This changelog, linked from the Foundry package page and the README.
 
 ### Changed
 
-- Limited this release line to Foundry V14, with build 14.367 or later required.
+- Requires Foundry V14, build 14.367 or later.
 - Updated the package description and author information.
-- The module website link opens its Foundry package page.
+- The module's website link now goes to its Foundry package page.
