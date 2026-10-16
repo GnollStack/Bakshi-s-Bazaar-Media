@@ -1,0 +1,86 @@
+title: Bakshi's Bazaar Archives
+description: Changelogs, screenshots, demo GIFs and guides for my Foundry VTT modules.
+url: https://gnollstack.github.io
+baseurl: /bakshis-bazaar-archives
+
+remote_theme: just-the-docs/just-the-docs@v0.12.0
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-optional-front-matter
+  - jekyll-readme-index
+  - jekyll-titles-from-headings
+  - jekyll-relative-links
+  - jekyll-seo-tag
+
+search_enabled: true
+heading_anchors: true
+back_to_top: true
+back_to_top_text: Back to top
+aux_links:
+  Discord: https://discord.gg/tcdYk54fxC
+  Patreon: https://www.patreon.com/cw/GnollStack
+aux_links_new_tab: true
+footer_content: "Copyright &copy; 2026 GnollStack. All rights reserved."
+
+relative_links:
+  enabled: true
+  collections: false
+
+exclude:
+  - LICENSE
+  - tools/
+
+# Navigation. Each module's README is its page, and files in its folder
+# (CHANGELOG.md, guides/*.md) are listed under it.
+defaults:
+  - scope: { path: "" }
+    values: { layout: default }
+  - scope: { path: "README.md" }
+    values: { nav_order: 1 }
+  - scope: { path: "support.md" }
+    values: { nav_order: 90 }
+  - scope: { path: "brand" }
+    values: { nav_exclude: true }
+  - scope: { path: "*/CHANGELOG.md" }
+    values: { title: Changelog, nav_order: 1 }
+
+  # Premium
+  - scope: { path: "activity-Importer-5e" }
+    values: { parent: 5e Activity Importer }
+  - scope: { path: "activity-Importer-5e/README.md" }
+    values: { parent: null, nav_order: 10 }
+  - scope: { path: "custom-currency-5e" }
+    values: { parent: Custom Currency 5e }
+  - scope: { path: "custom-currency-5e/README.md" }
+    values: { parent: null, nav_order: 11 }
+  - scope: { path: "filesmith" }
+    values: { parent: FileSmith }
+  - scope: { path: "filesmith/README.md" }
+    values: { parent: null, nav_order: 12 }
+  - scope: { path: "immersive-vision" }
+    values: { parent: Immersive Vision FX }
+  - scope: { path: "immersive-vision/README.md" }
+    values: { parent: null, nav_order: 13 }
+  - scope: { path: "traffick" }
+    values: { parent: "Traffick: Trade & Barter Overhaul" }
+  - scope: { path: "traffick/README.md" }
+    values: { parent: null, nav_order: 14 }
+
+  # Free
+  - scope: { path: "5e-item-importer" }
+    values: { parent: 5e Item Importer }
+  - scope: { path: "5e-item-importer/README.md" }
+    values: { parent: null, nav_order: 20 }
+  - scope: { path: "show-of-hands" }
+    values: { parent: "Show of Hands: Targeting & Cursors" }
+  - scope: { path: "show-of-hands/README.md" }
+    values: { parent: null, nav_order: 21 }
+  - scope: { path: "squad-combat-initiative" }
+    values: { parent: Squad Combat Initiative }
+  - scope: { path: "squad-combat-initiative/README.md" }
+    values: { parent: null, nav_order: 22 }
+  - scope: { path: "the-sound-of-silence" }
+    values: { parent: The Sound of Silence }
+  - scope: { path: "the-sound-of-silence/README.md" }
+    values: { parent: null, nav_order: 23 }

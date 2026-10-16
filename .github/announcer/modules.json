@@ -1,0 +1,77 @@
+{
+  "site": "https://gnollstack.github.io/bakshis-bazaar-archives",
+  "modules": [
+    {
+      "id": "5e-activity-importer",
+      "name": "5e Activity Importer",
+      "folder": "activity-Importer-5e",
+      "tier": "premium",
+      "manifest": "https://r2.foundryvtt.com/packages-public/5e-activity-importer/module.json",
+      "page": "https://foundryvtt.com/packages/5e-activity-importer"
+    },
+    {
+      "id": "custom-currency-5e",
+      "name": "Custom Currency 5e",
+      "folder": "custom-currency-5e",
+      "tier": "premium",
+      "manifest": "https://r2.foundryvtt.com/packages-public/custom-currency-5e/module.json",
+      "page": "https://foundryvtt.com/packages/custom-currency-5e"
+    },
+    {
+      "id": "filesmith",
+      "name": "FileSmith",
+      "folder": "filesmith",
+      "tier": "premium",
+      "manifest": "https://r2.foundryvtt.com/packages-public/filesmith/module.json",
+      "page": "https://foundryvtt.com/packages/filesmith"
+    },
+    {
+      "id": "immersive-vision-fx",
+      "name": "Immersive Vision FX",
+      "folder": "immersive-vision",
+      "tier": "premium",
+      "manifest": "https://r2.foundryvtt.com/packages-public/immersive-vision-fx/module.json",
+      "page": "https://foundryvtt.com/packages/immersive-vision-fx"
+    },
+    {
+      "id": "traffick",
+      "name": "Traffick: Trade & Barter Overhaul",
+      "folder": "traffick",
+      "tier": "premium",
+      "manifest": "https://r2.foundryvtt.com/packages-public/traffick/module.json",
+      "page": "https://foundryvtt.com/packages/traffick"
+    },
+    {
+      "id": "5e-item-importer",
+      "name": "5e Item Importer",
+      "folder": "5e-item-importer",
+      "tier": "free",
+      "manifest": "https://github.com/GnollStack/5e-Item-Importer/releases/latest/download/module.json",
+      "page": "https://github.com/GnollStack/5e-Item-Importer/releases/latest"
+    },
+    {
+      "id": "show-of-hands",
+      "name": "Show of Hands: Targeting & Cursors",
+      "folder": "show-of-hands",
+      "tier": "free",
+      "manifest": "https://github.com/GnollStack/Show-Of-Hands/releases/latest/download/module.json",
+      "page": "https://github.com/GnollStack/Show-Of-Hands/releases/latest"
+    },
+    {
+      "id": "squad-combat-initiative",
+      "name": "Squad Combat Initiative",
+      "folder": "squad-combat-initiative",
+      "tier": "free",
+      "manifest": "https://github.com/GnollStack/Squad-Combat-Initiative/releases/latest/download/module.json",
+      "page": "https://github.com/GnollStack/Squad-Combat-Initiative/releases/latest"
+    },
+    {
+      "id": "the-sound-of-silence",
+      "name": "The Sound of Silence",
+      "folder": "the-sound-of-silence",
+      "tier": "free",
+      "manifest": "https://github.com/GnollStack/The-Sound-of-Silence/releases/latest/download/module.json",
+      "page": "https://github.com/GnollStack/The-Sound-of-Silence/releases/latest"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+name: Announce releases
+
+# Checks each module's published manifest and posts new releases to Discord.
+# Scheduled runs stay off until the ANNOUNCER_ENABLED repository variable is "true".
+# Manual runs preview by default.
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: Preview only, post nothing
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: announce
+  cancel-in-progress: false
+
+jobs:
+  announce:
+    if: github.event_name == 'workflow_dispatch' || vars.ANNOUNCER_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check for new releases
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          DISCORD_WEBHOOK_URL_PREMIUM: ${{ secrets.DISCORD_WEBHOOK_URL_PREMIUM }}
+          DISCORD_ROLE_ID: ${{ vars.DISCORD_ROLE_ID }}
+          DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
+        run: python .github/scripts/announce.py
+
+      - name: Save announced versions
+        if: always()
+        run: |
+          if git diff --quiet -- .github/announcer/announced.json; then
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Record announced releases" -- .github/announcer/announced.json
+          git push
